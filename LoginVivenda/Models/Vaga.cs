@@ -14,7 +14,6 @@ namespace LoginVivenda.Models
         [StringLength(50)]
         public string? Cargo { get; set;}
 
-        public ICollection<Empresa>? Empresas { get; set }
-
+        public Empresa? Empresas { get; set }
     }
 }

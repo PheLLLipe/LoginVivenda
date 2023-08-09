@@ -60,10 +60,15 @@ namespace LoginVivenda.Models
 
             public ICollection<Formacao> Formacao { get; set; } = new List<Formacao>();
 
-            public Endereco? Endereco { get; set; };
+            public Endereco? Endereco { get; set; }
 
-            // Espaço para o curriculo PDF
-            // Espaço para a carta de apresentação PDF
+            [StringLength(20)]
+            [Display(Name = "Curriculo/PDF")]
+            public string? CurriculoPdf { get; set; }
+
+            [StringLength(20)]
+            [Display (Name = "Carta de Apresentação/PDF")]
+            public string? CartadeApresentacaoPdf { get; set; }
 
         }
 
