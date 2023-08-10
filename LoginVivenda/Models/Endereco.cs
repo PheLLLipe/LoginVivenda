@@ -26,7 +26,6 @@ namespace LoginVivenda.Models
         [StringLength(65)]
         public string? Rua { get; set;}
 
-        [Required]
         [StringLength(6)]
         public string? Numero { get; set; }
 
