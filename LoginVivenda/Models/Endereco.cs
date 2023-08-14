@@ -1,8 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginVivenda.Models
 {
-    public class Endereco
+	[Table("endereco")]
+
+	public class Endereco
     {
         public int Id { get; set; }
 

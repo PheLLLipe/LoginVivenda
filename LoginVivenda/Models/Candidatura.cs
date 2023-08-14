@@ -1,8 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginVivenda.Models
 {
-    public class Candidatura
+	[Table("Candidatura")]
+
+	public class Candidatura
     {
         public int Id { get; set; }
         public Vaga? Vaga { get; set; }
@@ -20,6 +23,7 @@ namespace LoginVivenda.Models
 
     }
 }
+
 
 public enum CandidaturaStatus { Sim, Não }
 public enum CandidaturaNota {  }

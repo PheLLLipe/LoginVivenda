@@ -1,8 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginVivenda.Models
 {
-    public class Vaga
+	[Table("vaga")]
+
+	public class Vaga
     {
         public int Id { get; set; }
 

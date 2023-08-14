@@ -1,9 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Linq;
 
 namespace LoginVivenda.Models
 {
-    public class Formacao
+	[Table("formacao")]
+
+	public class Formacao
     {
         public int Id { get; set; }
 
