@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginVivenda.Models
 {
+    [Table("Vagas")]
     public class Vaga
     {
         public int Id { get; set; }

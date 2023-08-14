@@ -1,7 +1,13 @@
+using LoginVivenda.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<LoginVivendaContext>(
+	options => options.UseNpgsql(builder.Configuration.GetConnectionString("VivendaContext"))
+	);
 
 var app = builder.Build();
 
