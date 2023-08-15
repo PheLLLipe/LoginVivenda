@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginVivenda.Models
 {
+    [Table("Candidatura")]
     public class Candidatura
     {
         public int Id { get; set; }
@@ -23,3 +25,5 @@ namespace LoginVivenda.Models
 
 public enum CandidaturaStatus { Sim, Não }
 public enum CandidaturaNota {  }
+
+// Adicionar um random para as notas !!!
