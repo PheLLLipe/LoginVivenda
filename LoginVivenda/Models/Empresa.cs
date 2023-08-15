@@ -32,3 +32,4 @@ namespace LoginVivenda.Models
         public Endereco? Endereco { get; set; }
     }
 }
+
