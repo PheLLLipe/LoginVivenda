@@ -1,0 +1,114 @@
+﻿@page
+@model LoginVivenda.Pages.Curriculo.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Civil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].LoadedFromDatabase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Telefone2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Nacionalidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Deficiencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Qual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Objetivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].Habilidades)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].CurriculoPdf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidato[0].CartadeApresentacaoPdf)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Candidato) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Civil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoadedFromDatabase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nacionalidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deficiencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objetivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Habilidades)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurriculoPdf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CartadeApresentacaoPdf)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

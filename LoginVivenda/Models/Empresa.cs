@@ -25,7 +25,6 @@ namespace LoginVivenda.Models
         [StringLength(50)]
         public string? Email { get; set;}
 
-        [Required]
         [StringLength(11)]
         public string? Contato { get; set;}
 

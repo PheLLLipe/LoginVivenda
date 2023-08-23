@@ -7,71 +7,63 @@ namespace LoginVivenda.Models
     [Table ("Candidato")]
     public class Candidato
     {
-        public int Id { get; set; }
+       public int Id { get; set; }
 
-        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
-        [StringLength(15, ErrorMessage = "Caracteres em excesso")]
-        [Display(Name = "Nome do Candidato")]
-        public string? Name { get; set; }
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
+       [StringLength(70)]
+       [Display(Name = "Nome do Candidato")]
+       public string? Name { get; set; }
 
-        public class Curriculo
-        {
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
+       [StringLength(11)]
+       public string? CPF { get; set; }
 
-            [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
-            [StringLength(11)]
-            public string? CPF { get; set; }
+       [Required]
+       public CurriculoEstado Civil { get; set; }
 
-            [Required]
-            [StringLength(70)]
-            public string? Nome { get; set; }
+       [Required]
+       [Display(Name = "Data de Nascimento")]
+       public DateTime LoadedFromDatabase { get; set; }
 
-            public CurriculoEstado Civil { get; set; }
+       [Required]
+       public CurriculoSexo Genero { get; set; }
 
-            [Required]
-            [Display(Name = "Data de Nascimento")]
-            public DateTime LoadedFromDatabase { get; set; }
+       [Required]
+       [StringLength(11)]
+       [Display(Name = "Telefone 1")]
+       public string? Telefone { get; set; }
 
-            public CurriculoSexo Genero { get; set; }
+       [StringLength(11)]
+       [Display(Name = "Telefone 2")]
+       public string? Telefone2 { get; set; }
 
-            [Required]
-            [StringLength(11)]
-            [Display(Name = "Telefone 1")]
-            public string? Telefone { get; set; }
+       [Required]
+       [StringLength(25)]
+       public string? Nacionalidade { get; set; }
 
-            [StringLength(11)]
-            [Display(Name = "Telefone 2")]
-            public string? Telefone2 { get; set; }
+       [Required]
+       public CurriculoDef Deficiencia { get; set; }
 
-            [Required]
-            [StringLength(25)]
-            public string? Nacionalidade { get; set; }
+       [StringLength(40)]
+       [Display (Name = "Qual ?")]
+       public string? Qual {get; set; }
 
-            public CurriculoDef Deficiencia { get; set; }
+       [StringLength (200)]
+       public string? Objetivo { get; set;}
 
-            [StringLength(40)]
-            [Display (Name = "Qual ?")]
-            public string? Qual {get; set; }
+       [StringLength(200)]
+       public string? Habilidades { get; set;}
 
-            [StringLength (200)]
-            public string? Objetivo { get; set;}
+       public ICollection<Formacao> Formacao { get; set; } = new List<Formacao>();
 
-            [StringLength(200)]
-            public string? Habilidades { get; set;}
+       [Required]
+       public Endereco? Endereco { get; set; }
 
-            public ICollection<Formacao> Formacao { get; set; } = new List<Formacao>();
-
-            public Endereco? Endereco { get; set; }
-
-            [StringLength(20)]
-            [Display(Name = "Curriculo/PDF")]
-            public string? CurriculoPdf { get; set; }
-
-            [StringLength(20)]
-            [Display (Name = "Carta de Apresentação/PDF")]
-            public string? CartadeApresentacaoPdf { get; set; }
-
-        }
-
+       [Display(Name = "Curriculo/PDF")]
+       public IFormFile? CurriculoPdf { get; set; }
+        
+       [Display(Name = "Carta de Apresentação/PDF")]
+       public IFormFile? CartaPDF { get; set; }
     }
 }
 
