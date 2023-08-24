@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using LoginVivenda.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<LoginVivendaContext>(
-	options => options.UseNpgsql(builder.Configuration.GetConnectionString("VivendaContext"))
+	options => options.UseNpgsql(builder.Configuration.GetConnectionString("VivendaContext") ?? throw new InvalidOperationException("Connection string 'VivendaContext' not found."))
 	);
 
 var app = builder.Build();

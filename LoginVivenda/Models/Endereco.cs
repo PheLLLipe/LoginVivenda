@@ -8,23 +8,23 @@ namespace LoginVivenda.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(8)]
         public string? CEP { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(2)]
         public string? UF { get; set;}
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(30)]
         public string? Cidade { get; set;}
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(40)]
         public string? Bairro { get; set;}
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(65)]
         public string? Rua { get; set;}
 

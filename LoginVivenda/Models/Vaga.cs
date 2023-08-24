@@ -12,7 +12,7 @@ namespace LoginVivenda.Models
         [StringLength(5, ErrorMessage = "Caracteres em excesso")]
         public string? Horario { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(50)]
         public string? Cargo { get; set;}
 
