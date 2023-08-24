@@ -7,21 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\CurriculoCandidato\**" />
-    <Compile Remove="Pages\Empresas\**" />
-    <Compile Remove="Pages\Vagas\**" />
-    <Content Remove="Pages\CurriculoCandidato\**" />
-    <Content Remove="Pages\Empresas\**" />
-    <Content Remove="Pages\Vagas\**" />
-    <EmbeddedResource Remove="Pages\CurriculoCandidato\**" />
-    <EmbeddedResource Remove="Pages\Empresas\**" />
-    <EmbeddedResource Remove="Pages\Vagas\**" />
-    <None Remove="Pages\CurriculoCandidato\**" />
-    <None Remove="Pages\Empresas\**" />
-    <None Remove="Pages\Vagas\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Models\Curriculocs.cs" />
   </ItemGroup>
 

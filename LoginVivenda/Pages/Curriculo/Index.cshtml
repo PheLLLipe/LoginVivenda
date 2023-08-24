@@ -53,7 +53,7 @@
                 @Html.DisplayNameFor(model => model.Candidato[0].CurriculoPdf)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Candidato[0].CartadeApresentacaoPdf)
+                @Html.DisplayNameFor(model => model.Candidato[0].CartaPDF)
             </th>
             <th></th>
         </tr>
@@ -101,7 +101,7 @@
                 @Html.DisplayFor(modelItem => item.CurriculoPdf)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CartadeApresentacaoPdf)
+                    @Html.DisplayFor(modelItem => item.CartaPDF)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
