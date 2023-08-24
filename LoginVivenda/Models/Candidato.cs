@@ -60,10 +60,10 @@ namespace LoginVivenda.Models
        public Endereco? Endereco { get; set; }
 
        [Display(Name = "Curriculo/PDF")]
-       public IFormFile? CurriculoPdf { get; set; }
+       public string? CurriculoPdf { get; set; }
         
        [Display(Name = "Carta de Apresentação/PDF")]
-       public IFormFile? CartaPDF { get; set; }
+       public string? CartaPDF { get; set; }
     }
 }
 
