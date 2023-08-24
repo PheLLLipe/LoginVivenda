@@ -18,17 +18,17 @@ namespace LoginVivenda.Models
        [StringLength(11)]
        public string? CPF { get; set; }
 
-       [Required]
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
        public CurriculoEstado Civil { get; set; }
 
-       [Required]
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
        [Display(Name = "Data de Nascimento")]
        public DateTime LoadedFromDatabase { get; set; }
 
        [Required]
        public CurriculoSexo Genero { get; set; }
 
-       [Required]
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
        [StringLength(11)]
        [Display(Name = "Telefone 1")]
        public string? Telefone { get; set; }
@@ -37,11 +37,11 @@ namespace LoginVivenda.Models
        [Display(Name = "Telefone 2")]
        public string? Telefone2 { get; set; }
 
-       [Required]
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
        [StringLength(25)]
        public string? Nacionalidade { get; set; }
 
-       [Required]
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
        public CurriculoDef Deficiencia { get; set; }
 
        [StringLength(40)]
@@ -56,7 +56,7 @@ namespace LoginVivenda.Models
 
        public ICollection<Formacao> Formacao { get; set; } = new List<Formacao>();
 
-       [Required]
+       [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
        public Endereco? Endereco { get; set; }
 
        [Display(Name = "Curriculo/PDF")]

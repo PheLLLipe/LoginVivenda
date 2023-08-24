@@ -9,11 +9,11 @@ namespace LoginVivenda.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(70)]
         public string? Instituto { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
         [StringLength(50)]
         [Display (Name = "Nome do Curso")]
         public string? Nome { get; set; }
