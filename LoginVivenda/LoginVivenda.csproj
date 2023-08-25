@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="Models\Curriculocs.cs" />
+    <Compile Remove="Pages\Grafico.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Grafico.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
