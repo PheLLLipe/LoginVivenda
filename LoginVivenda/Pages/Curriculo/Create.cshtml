@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "Aluno_Layout";
 }
 
 <h1>Criar Curriculo</h1>
@@ -84,16 +85,13 @@
                 <span asp-validation-for="Candidato.CartaPDF" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
+
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="AlunoIndex">Voltar a Pagina Inicial</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
