@@ -63,8 +63,6 @@ namespace LoginVivenda.Models
        [Display(Name = "Curriculo/PDF")]
        public string? CurriculoPdf { get; set; }
         
-       [Display(Name = "Carta de Apresentação/PDF")]
-       public string? CartaPDF { get; set; }
     }
 }
 
