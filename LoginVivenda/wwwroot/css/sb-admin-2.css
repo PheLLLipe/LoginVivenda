@@ -9664,11 +9664,11 @@ a.text-warning:hover, a.text-warning:focus {
 }
 
 .text-danger {
-  color: #e74a3b !important;
+    color: #F45F00 !important;
 }
 
 a.text-danger:hover, a.text-danger:focus {
-  color: #be2617 !important;
+    color: #F45F00 !important;
 }
 
 .text-light {
