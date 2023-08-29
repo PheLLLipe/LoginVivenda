@@ -22,7 +22,8 @@ namespace LoginVivenda.Models
        public CurriculoEstado Civil { get; set; }
 
        [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
-       [Display(Name = "Data de Nascimento")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Data de Nascimento")]
        public DateTime LoadedFromDatabase { get; set; }
 
        [Required]
@@ -62,8 +63,6 @@ namespace LoginVivenda.Models
        [Display(Name = "Curriculo/PDF")]
        public string? CurriculoPdf { get; set; }
         
-       [Display(Name = "Carta de Apresentação/PDF")]
-       public string? CartaPDF { get; set; }
     }
 }
 

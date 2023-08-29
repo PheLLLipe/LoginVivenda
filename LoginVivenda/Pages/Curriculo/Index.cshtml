@@ -2,14 +2,12 @@
 @model LoginVivenda.Pages.Curriculo.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Curriculo";
 }
 
-<h1>Index</h1>
+<h1>Curriculos cadastrados</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -51,9 +49,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Candidato[0].CurriculoPdf)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Candidato[0].CartaPDF)
             </th>
             <th></th>
         </tr>
@@ -99,9 +94,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CurriculoPdf)
-            </td>
-            <td>
-                    @Html.DisplayFor(modelItem => item.CartaPDF)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

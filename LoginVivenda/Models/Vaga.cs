@@ -9,7 +9,7 @@ namespace LoginVivenda.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]
-        [StringLength(5, ErrorMessage = "Caracteres em excesso")]
+        [StringLength(14, ErrorMessage = "Caracteres em excesso")]
         public string? Horario { get; set; }
 
         [Required(ErrorMessage = "Campo \"{0}\" é obrigatorio")]

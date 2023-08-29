@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>@ViewData["Title"] - LoginVivenda</title>
+    <title>@ViewData["Title"] - Oportunidade para todos</title>
 
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -26,6 +26,8 @@
 </head>
 
 
+
+
 <body id="page-top">
 
 
@@ -36,11 +38,15 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-page="Index">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon">
                 </div>
-                <div class="sidebar-brand-text mx-3"> Vivenda Curriculo <sup></sup></div>
+                <div class="sidebar-brand-text mx-3">
+                    Oportunidade para todos
+
+                </div>
             </a>
 
             <!-- Divider -->
@@ -48,7 +54,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" asp-page="AlunoIndex">
+                <a class="nav-link" asp-page="/AlunoIndex">
                     <span>Tela inicial</span>
                 </a>
             </li>
@@ -56,8 +62,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" asp-page="EditarCurriculo">
-                    <span>Editar Curriculo</span>
+                <a class="nav-link" asp-page="/Curriculo/Create">
+                    <span> Curriculo</span>
                 </a>
              
             </li>
@@ -89,20 +95,23 @@
                     
                       
                         <!-- Nav Item - User Information -->
-                        <div class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Eduardo Damasio</span>
-                         <img  src="~/img/icon.png" class="img-profile rounded-circle" />
-                               </a>
-                               </div> 
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Login usuario</span>
+                        <img class="img-profile rounded-circle"
+                        <img src="~/img/icon.png" />
+                             
                             <!-- Dropdown - User Information -->
+                             <li class="nav-item">
+                               <a class="nav-link collapsed" asp-page="/Curriculo/index"></a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                  aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <div class="dropdown-item" >
+                                    
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Conta
-                                </a>
+                                </div>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Editar conta
@@ -126,7 +135,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Eduardo, Michel E Richard</span>
+                    <span>Eduardo, Michel E Phelipe</span>
                 </div>
             </div>
         </footer>
@@ -154,7 +163,7 @@
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                     <a class="btn btn-primary" href="lo gin.html">Logout</a>
                 </div>
             </div>
@@ -178,6 +187,8 @@
     <script src="~/js/demo/chart-area-demo.js"></script>
     <script src="~/js/demo/chart-pie-demo.js"></script>
 
+
 </body>
+
 
 </html>
