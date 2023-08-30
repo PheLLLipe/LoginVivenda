@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using LoginVivenda.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace LoginVivenda.Data
 {
-    public class LoginVivendaContext:DbContext
+    public class LoginVivendaContext : IdentityDbContext<User>
     {
         public LoginVivendaContext(DbContextOptions<LoginVivendaContext> options) : base(options) { }
 
